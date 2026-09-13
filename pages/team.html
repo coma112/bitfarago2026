@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 1 — Team introduction | BitFaragó 2026</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/team.css">
+</head>
+
+<body data-page="team" data-base="../">
+
+  <header class="header" id="header"></header>
+
+  <main class="main container">
+
+    <div class="section__header">
+      <div>
+        <span class="badge">Task 1</span>
+        <h1>Team introduction</h1>
+      </div>
+      <div class="clock">
+        <i data-lucide="clock" class="clock__icon"></i>
+        <time data-clock>--:--:--</time>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="grid grid--two">
+        <div class="card">
+          <div class="card__header">
+            <i data-lucide="school" class="icon--lg"></i>
+            <h2 class="card__title">School</h2>
+          </div>
+          <p data-school>School name, City</p>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <i data-lucide="graduation-cap" class="icon--lg"></i>
+            <h2 class="card__title">Mentor teacher</h2>
+          </div>
+          <div data-teachers>
+            <p>Mentor Teacher</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header">
+        <i data-lucide="users" class="icon--lg"></i>
+        <h2>Team members</h2>
+      </div>
+      <p class="section__description">
+        Click the button under a member's name to show their introduction text.
+      </p>
+      <div class="grid" data-members></div>
+    </section>
+
+    <section class="section gallery">
+      <div class="section__header">
+        <i data-lucide="images" class="icon--lg"></i>
+        <h2>Extra images</h2>
+      </div>
+      <p class="section__description">
+        Use the button to step through the images; after the last one it starts over.
+      </p>
+
+      <div class="gallery__stage" data-gallery-stage>
+        <p class="gallery__caption">Press the button to show the images.</p>
+      </div>
+
+      <button type="button" class="btn btn--primary" data-gallery-next>
+        <i data-lucide="chevron-right"></i> Next image
+      </button>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="../vendor/lucide.min.js"></script>
+  <script src="../js/core/app.js"></script>
+  <script src="../js/core/dom.js"></script>
+  <script src="../js/core/icons.js"></script>
+  <script src="../js/core/storage.js"></script>
+  <script src="../js/core/format.js"></script>
+  <script src="../js/components/theme.js"></script>
+  <script src="../js/components/layout.js"></script>
+  <script src="../js/components/clock.js"></script>
+  <script src="../js/pages/team/data.js"></script>
+  <script src="../js/pages/team/members.js"></script>
+  <script src="../js/pages/team/gallery.js"></script>
+  <script src="../js/pages/team/index.js"></script>
+  <script src="../js/boot.js"></script>
+</body>
+</html>

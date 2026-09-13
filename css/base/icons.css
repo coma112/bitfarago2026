@@ -1,0 +1,16 @@
+[data-lucide],
+.icon,
+.lucide {
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  vertical-align: -0.18em;
+}
+
+.icon--sm { width: 1em; height: 1em; }
+.icon--lg { width: 1.5em; height: 1.5em; }
+.icon--xl { width: 2.25em; height: 2.25em; stroke-width: 1.6; }
+
+i[data-lucide] { display: inline-block; }
