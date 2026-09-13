@@ -11,9 +11,15 @@
   font-size: var(--size-lg);
   font-variant-numeric: tabular-nums;
 }
-.clock__icon { color: var(--color-primary); }
+.clock__icon {
+  color: var(--color-primary);
+}
 
-.member-card { display: flex; flex-direction: column; gap: var(--space-3); }
+.member-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
 
 .member-card__photo {
   width: 100%;
@@ -23,7 +29,10 @@
   background: var(--color-surface-2);
 }
 
-.member-card__name { margin: 0; font-size: var(--size-lg); }
+.member-card__name {
+  margin: 0;
+  font-size: var(--size-lg);
+}
 
 .member-card__bio {
   color: var(--color-text-muted);
@@ -32,7 +41,9 @@
   border-top: 1px solid var(--color-border);
 }
 
-.gallery { text-align: center; }
+.gallery {
+  text-align: center;
+}
 
 .gallery__stage {
   display: grid;
@@ -56,4 +67,31 @@
   margin-top: var(--space-3);
   font-size: var(--size-sm);
   color: var(--color-text-muted);
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 30px;
+  display: block;
+}
+
+.card__header {
+  margin-top: 5%;
+}
+
+.Teacher__card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  margin: auto;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 30px;
 }
