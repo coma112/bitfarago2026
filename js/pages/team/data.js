@@ -40,9 +40,9 @@
     ],
 
     gallery: [
-      { image: 'assets/img/gallery/01.jpg', caption: 'TODO: képaláírás' },
-      { image: 'assets/img/gallery/02.jpg', caption: 'TODO: képaláírás' },
-      { image: 'assets/img/gallery/03.jpg', caption: 'TODO: képaláírás' }
+      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg', caption: 'TODO: képaláírás' },
+      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg', caption: 'TODO: képaláírás' },
+      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg', caption: 'TODO: képaláírás' }
     ]
   };
 

@@ -24,7 +24,7 @@
 
 .member-card__photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: var(--radius-md);
   background: var(--color-surface-2);
@@ -76,7 +76,7 @@
 
 .card__image {
   width: 100%;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 4;
   object-fit: cover;
   object-position: center 30%;
   border-radius: 30px;
@@ -90,7 +90,7 @@
 .Teacher__card__image {
   display: block;
   width: 100%;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 4;
   margin: auto;
   object-fit: cover;
   object-position: center 15%;
