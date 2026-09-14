@@ -14,19 +14,19 @@
       {
         name: 'Pusztai Attila',
         role: 'Fullstack',
-        photo: 'assets/img/team/member1.jpg',
+        photo: 'assets/img/team/Pusztai.png',
         bio: 'TODO: rövid bemutatkozás (2-3 mondat).'
       },
       {
         name: 'Kulás Dominik',
         role: 'Fullstack',
-        photo: 'assets/img/team/member2.jpg',
+        photo: 'assets/img/team/domi.png',
         bio: 'TODO: rövid bemutatkozás (2-3 mondat).'
       },
       {
         name: 'Sós Dávid',
         role: 'Fullstack',
-        photo: 'assets/img/team/member3.jpg',
+        photo: 'assets/img/team/david.png',
         bio: 'TODO: rövid bemutatkozás (2-3 mondat).'
       }
     ],

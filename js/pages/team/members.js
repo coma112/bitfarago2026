@@ -26,7 +26,7 @@
 
     var button = document.createElement('button');
     button.type = 'button';
-    button.className = 'member-card__toggle';
+    button.className = 'badge';
     button.setAttribute('data-toggle', '');
     button.textContent = 'Show intro';
     card.appendChild(button);
