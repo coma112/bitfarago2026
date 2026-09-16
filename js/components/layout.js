@@ -5,7 +5,8 @@
 
   var PAGES = [
     { id: 'home', title: 'Home',   path: 'index.html',      icon: 'house' },
-    { id: 'team', title: 'Task 1', path: 'pages/team.html', icon: 'users' }
+    { id: 'team', title: 'Task 1', path: 'pages/team.html', icon: 'users' },
+    { id: 'refuel', title: 'Task 2', path: 'pages/refuel.html', icon: 'fuel' }
   ];
 
   function nav(activeId) {
