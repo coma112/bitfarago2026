@@ -86,9 +86,27 @@
             </button>
           </form>
         </div>
+        <div class="card monthly-chart">
+          <div class="card__header">
+            <span class="card__icon card__icon--primary">
+              <i data-lucide="bar-chart-3"></i>
+            </span>
+            <div>
+              <h2>Havi költségek</h2>
+              <p class="card__subtitle">
+                Mennyit költöttél tankolásra hónaponként?
+              </p>
+            </div>
+          </div>
+
+          <div id="monthlyChart" class="bar-chart"></div>
+        </div>
       </div>
     </main>
 
+    <footer class="footer" id="footer"></footer>
+
+    <script src="../js/pages/refuel/monthlyStats.js"></script>
     <script src="../js/pages/refuel/addRefuel.js"></script>
     <script src="../js/pages/refuel/stats.js"></script>
     <script src="../vendor/lucide.min.js"></script>

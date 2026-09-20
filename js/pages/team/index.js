@@ -73,12 +73,16 @@ function saveRefuel(refuel) {
   localStorage.setItem(REFUEL_KEY, JSON.stringify(refuels));
 
   renderStatCards(document.querySelector('#statCards'), refuels);
+  renderMonthlyChart(document.querySelector('#monthlyChart'), refuels);
+
 }
 
 App.page('refuel', function () {
   var refuels = getRefuels();
 
   renderStatCards(document.querySelector('#statCards'), refuels);
+  renderMonthlyChart(document.querySelector('#monthlyChart'), refuels);
+
 
   var form = document.querySelector('#refuelForm');
   if (form) form.addEventListener('submit', handleRefuelSubmit);
