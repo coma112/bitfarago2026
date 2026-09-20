@@ -3,6 +3,10 @@
   padding-block: var(--space-6) var(--space-7);
 }
 
+.main--wide {
+  max-width: var(--content-width-wide, 1500px); 
+}
+
 .section {
   margin-bottom: var(--space-7);
 }

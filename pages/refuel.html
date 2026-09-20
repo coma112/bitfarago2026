@@ -10,17 +10,86 @@
   <body data-page="refuel" data-base="../">
     <header class="header" id="header"></header>
 
-    <main class="main container">
+    <main class="main container main--wide">
       <div class="section__header">
         <div>
           <h1>Tankolások áttekintése</h1>
           <p>Kövesd nyomon a tankolásaidat, a költségeket és a fogyasztást</p>
         </div>
-        
       </div>
       <div id="statCards" class="stat-cards"></div>
+
+      <div class="dashboard--row">
+        <div class="card new-refuel">
+          <div class="card__header">
+            <span class="card__icon card__icon--primary">
+              <i data-lucide="plus-circle"></i>
+            </span>
+            <h2>Új tankolás rögzítése</h2>
+          </div>
+          <form id="refuelForm" data-refuel-form class="refuel-form">
+            <div class="form-field">
+              <label for="refuelDate">Dátum</label>
+              <div class="input-icon">
+                <i data-lucide="calendar"></i>
+                <input type="date" id="refuelDate" name="date" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="refuelAmount">Tankolt mennyiség (liter)</label>
+              <div class="input-icon">
+                <i data-lucide="droplet"></i>
+                <input
+                  type="number"
+                  id="refuelAmount"
+                  name="amount"
+                  step="0.01"
+                  min="0.01"
+                  placeholder="pl. 50"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="refuelCost">Fizetett összeg (Ft)</label>
+              <div class="input-icon">
+                <i data-lucide="banknote"></i>
+                <input
+                  type="number"
+                  id="refuelCost"
+                  name="cost"
+                  step="1"
+                  min="1"
+                  placeholder="pl. 25000"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="refuelOdometer">Kilométer óra állás (km)</label>
+              <div class="input-icon">
+                <i data-lucide="gauge"></i>
+                <input
+                  type="number"
+                  id="refuelOdometer"
+                  name="odometer"
+                  step="1"
+                  min="1"
+                  placeholder="pl. 123456"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary">
+              <i data-lucide="save"></i>
+              Mentés
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
-    
+
+    <script src="../js/pages/refuel/addRefuel.js"></script>
     <script src="../js/pages/refuel/stats.js"></script>
     <script src="../vendor/lucide.min.js"></script>
     <script src="../js/core/app.js"></script>
