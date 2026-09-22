@@ -1,13 +1,13 @@
 .monthly-chart {
   padding: 16px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
 }
 
 .card__subtitle {
   font-size: 12px;
-  color: #667085;
+  color: var(--color-text-muted);
   margin: 2px 0 0;
 }
 
@@ -31,7 +31,7 @@
   flex-direction: column;
   justify-content: space-between;
   font-size: 11px;
-  color: #98a2b3;
+  color: var(--color-text-muted);
   text-align: right;
 }
 
@@ -41,7 +41,7 @@
   align-items: flex-end;
   gap: 8px;
   height: 100%;
-  border-left: 1px solid #eaecf0;
+  border-left: 1px solid var(--color-border);
   padding-bottom: 24px;
   box-sizing: border-box;
 }
@@ -59,18 +59,18 @@
 .bar-chart__bar {
   width: 60%;
   max-width: 28px;
-  background: #4f6df5;
+  background: var(--color-primary);
   border-radius: 4px 4px 0 0;
   transition: height 0.3s ease;
 }
 
 .bar-chart__bar:hover {
-  background: #2875ed;
+  background: var(--color-primary-dark);
 }
 
 .bar-chart__label {
   font-size: 11px;
-  color: #98a2b3;
+  color: var(--color-text-muted);
   margin-top: 8px;
   position: absolute;
   bottom: -24px;

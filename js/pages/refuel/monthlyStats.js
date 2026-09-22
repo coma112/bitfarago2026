@@ -1,11 +1,12 @@
 const MONTH_LABELS = ['Jan', 'Feb', 'Már', 'Ápr', 'Máj', 'Jún', 'Júl', 'Aug', 'Szep', 'Okt', 'Nov', 'Dec'];
 
-function getMonthlyCosts(refuels) {
+function getMonthlyCosts(refuels, year) {
   const totals = new Array(12).fill(0);
 
   refuels.forEach(refuel => {
-    const month = new Date(refuel.date).getMonth(); 
-    totals[month] += refuel.cost;
+    const date = new Date(refuel.date);
+    if (isNaN(date) || date.getFullYear() !== year) return;
+    totals[date.getMonth()] += refuel.cost;
   });
 
   return totals;
@@ -14,7 +15,11 @@ function getMonthlyCosts(refuels) {
 function renderMonthlyChart(container, refuels) {
   if (!container) return;
 
-  const totals = getMonthlyCosts(refuels);
+  const year = new Date().getFullYear();
+  const yearLabel = document.querySelector('[data-chart-year]');
+  if (yearLabel) yearLabel.textContent = year;
+
+  const totals = getMonthlyCosts(refuels, year);
   const maxValue = Math.max(...totals, 1); 
   const yMax = Math.ceil(maxValue / 20000) * 20000 || 20000; 
 

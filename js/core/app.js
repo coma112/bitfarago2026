@@ -23,7 +23,7 @@
           try {
             App.pages[name]();
           } catch (err) {
-            console.error('[App] Failed to start the "' + name + '" page:', err);
+            console.error('[App] A(z) "' + name + '" oldal indítása sikertelen:', err);
           }
         }
       };

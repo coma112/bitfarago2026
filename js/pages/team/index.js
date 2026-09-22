@@ -66,17 +66,6 @@
 })(window.App);
 
 
-function saveRefuel(refuel) {
-  const refuels = getRefuels();
-  refuels.push(refuel);
-  refuels.sort((a, b) => new Date(a.date) - new Date(b.date));
-  localStorage.setItem(REFUEL_KEY, JSON.stringify(refuels));
-
-  renderStatCards(document.querySelector('#statCards'), refuels);
-  renderMonthlyChart(document.querySelector('#monthlyChart'), refuels);
-
-}
-
 App.page('refuel', function () {
   var refuels = getRefuels();
 
