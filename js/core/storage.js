@@ -12,7 +12,7 @@
       var raw = window.localStorage.getItem(key);
       return raw === null ? fallback : JSON.parse(raw);
     } catch (err) {
-      console.warn('[storage] Failed to read:', key, err);
+      console.warn('[storage] Olvasás sikertelen:', key, err);
       return fallback;
     }
   }
@@ -22,7 +22,7 @@
       window.localStorage.setItem(key, JSON.stringify(value));
       return true;
     } catch (err) {
-      console.warn('[storage] Failed to write:', key, err);
+      console.warn('[storage] Írás sikertelen:', key, err);
       return false;
     }
   }
@@ -31,7 +31,7 @@
     try {
       window.localStorage.removeItem(key);
     } catch (err) {
-      console.warn('[storage] Failed to remove:', key, err);
+      console.warn('[storage] Törlés sikertelen:', key, err);
     }
   }
 

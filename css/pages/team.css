@@ -16,12 +16,6 @@
   color: var(--color-primary);
 }
 
-/* .member-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-} */
-
 .member-card__photo {
   width: 100%;
   aspect-ratio: 3 / 2;

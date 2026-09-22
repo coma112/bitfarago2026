@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="hu" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Task 1 — Team introduction | BitFaragó 2026</title>
+  <title>Task 1 — Csapatbemutató | BitFaragó 2026</title>
 
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/pages/team.css" />
@@ -17,7 +17,7 @@
     <div class="section__header">
       <div>
         <span class="badge">Task 1</span>
-        <h1>Team introduction</h1>
+        <h1>Csapatbemutató</h1>
         <p class="section__description" data-team-name></p>
       </div>
       <div class="clock">
@@ -39,7 +39,7 @@
         <div class="card" data-teacher-card>
           <div class="card__header">
             <i data-lucide="graduation-cap" class="icon--lg"></i>
-            <h2 class="card__title">Mentor teacher</h2>
+            <h2 class="card__title">Mentortanár</h2>
           </div>
           <div data-teachers></div>
         </div>
@@ -49,11 +49,10 @@
     <section class="section">
       <div class="section__header">
         <i data-lucide="users" class="icon--lg"></i>
-        <h2>Team members</h2>
+        <h2>Csapattagok</h2>
       </div>
       <p class="section__description">
-        Click the button under a member's name to show their introduction
-        text.
+        Kattints a csapattag neve alatti gombra a bemutatkozásához.
       </p>
       <div class="grid grid--team" data-members></div>
     </section>
@@ -61,19 +60,18 @@
     <section class="section gallery">
       <div class="section__header">
         <i data-lucide="images" class="icon--lg"></i>
-        <h2>Extra images</h2>
+        <h2>További képek</h2>
       </div>
       <p class="section__description">
-        Use the button to step through the images; after the last one it
-        starts over.
+        A gombbal lépkedhetsz a képek között, az utolsó után elölről kezdi.
       </p>
 
       <div class="gallery__stage" data-gallery-stage>
-        <p class="gallery__caption">Press the button to show the images.</p>
+        <p class="gallery__caption">Nyomd meg a gombot a képek megjelenítéséhez.</p>
       </div>
 
       <button type="button" class="btn btn--primary" data-gallery-next>
-        <i data-lucide="chevron-right"></i> Next image
+        <i data-lucide="chevron-right"></i> Következő kép
       </button>
     </section>
   </main>

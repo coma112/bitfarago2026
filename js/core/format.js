@@ -1,7 +1,7 @@
 (function (App) {
   'use strict';
 
-  var LOCALE = 'en-GB';
+  var LOCALE = 'hu-HU';
 
   function num(value, decimals) {
     return new Intl.NumberFormat(LOCALE, {

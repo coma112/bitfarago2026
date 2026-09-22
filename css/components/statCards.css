@@ -5,21 +5,22 @@
 }
 
 .stat-card {
-  background-color: white;
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 20px;
   display: flex;
   align-items: center;
   gap: 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
 }
 
 .card-icon {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #eef4ff;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
 
   display: flex;
   justify-content: center;
@@ -36,17 +37,17 @@
 .card-title {
   margin: 0;
   font-size: 13px;
-  color: #64748b;
+  color: var(--color-text-muted);
 }
 
 .card-value {
   margin: 5px 0;
   font-size: 24px;
-  color: #111827;
+  color: var(--color-text);
 }
 
 .card-unit {
   margin: 0;
   font-size: 12px;
-  color: #64748b;
+  color: var(--color-text-muted);
 }

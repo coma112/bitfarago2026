@@ -29,10 +29,8 @@ function saveRefuel(refuel) {
   refuels.sort((a, b) => new Date(a.date) - new Date(b.date));
   localStorage.setItem(REFUEL_KEY, JSON.stringify(refuels));
 
-  var qs = App.dom.qs;
-  App.refuelStats.render(qs('[data-stat-cards]'), refuels);
-  App.refuelTable.render(qs('[data-refuel-table]'), refuels);
-  App.refuelChart.render(qs('[data-monthly-chart]'), refuels);
+  renderStatCards(document.querySelector('#statCards'), refuels);
+  renderMonthlyChart(document.querySelector('#monthlyChart'), refuels);
   App.icons.refresh();
 }
 

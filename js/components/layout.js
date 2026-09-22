@@ -4,13 +4,13 @@
   var el = App.dom.el;
 
   var PAGES = [
-    { id: 'home', title: 'Home',   path: 'index.html',      icon: 'house' },
-    { id: 'team', title: 'Task 1', path: 'pages/team.html', icon: 'users' },
-    { id: 'refuel', title: 'Task 2', path: 'pages/refuel.html', icon: 'fuel' }
+    { id: 'home',   title: 'Kezdőlap',  path: 'index.html',        icon: 'house' },
+    { id: 'team',   title: '1. feladat', path: 'pages/team.html',   icon: 'users' },
+    { id: 'refuel', title: '2. feladat', path: 'pages/refuel.html', icon: 'fuel' }
   ];
 
   function nav(activeId) {
-    return el('nav', { class: 'nav', 'aria-label': 'Main menu' }, PAGES.map(function (page) {
+    return el('nav', { class: 'nav', 'aria-label': 'Főmenü' }, PAGES.map(function (page) {
       var isActive = page.id === activeId;
       return el('a', {
         class: 'nav__link' + (isActive ? ' nav__link--active' : ''),
@@ -30,7 +30,7 @@
       el('button', {
         class: 'theme-toggle',
         type: 'button',
-        'aria-label': 'Toggle light / dark theme',
+        'aria-label': 'Váltás világos és sötét téma között',
         'data-theme-toggle': ''
       }, [App.icons.el('sun-moon')])
     ]);
@@ -38,7 +38,7 @@
 
   function footer() {
     return el('div', { class: 'footer__inner container' }, [
-      el('p', { text: 'BitFaragó 2026 — team page' }),
+      el('p', { text: 'BitFaragó 2026 — csapatoldal' }),
       el('p', { class: 'footer__muted', text: 'HTML · CSS · JavaScript' })
     ]);
   }

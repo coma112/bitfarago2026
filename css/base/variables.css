@@ -1,10 +1,13 @@
 :root {
+  color-scheme: light;
+
   --color-bg:          #f6f7fb;
   --color-surface:     #ffffff;
   --color-surface-2:   #f0f2f7;
   --color-border:      #e2e5ee;
   --color-text:        #171a21;
   --color-text-muted:  #5c6376;
+  --color-input-bg:    #ffffff;
 
   --color-primary:      #3b5bfd;
   --color-primary-dark: #2c46d6;
@@ -46,12 +49,15 @@
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
+
   --color-bg:          #0f1218;
   --color-surface:     #171b24;
   --color-surface-2:   #1f2532;
   --color-border:      #2a3141;
   --color-text:        #e8eaf0;
   --color-text-muted:  #9aa3b8;
+  --color-input-bg:    #1f2532;
 
   --color-primary:      #7b93ff;
   --color-primary-dark: #5f7bff;
@@ -64,14 +70,21 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
     --color-bg:          #0f1218;
     --color-surface:     #171b24;
     --color-surface-2:   #1f2532;
     --color-border:      #2a3141;
     --color-text:        #e8eaf0;
     --color-text-muted:  #9aa3b8;
+    --color-input-bg:    #1f2532;
     --color-primary:      #7b93ff;
     --color-primary-dark: #5f7bff;
     --color-primary-soft: #1d2440;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
   }
 }

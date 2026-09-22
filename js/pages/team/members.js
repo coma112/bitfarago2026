@@ -28,7 +28,7 @@
     button.type = 'button';
     button.className = 'badge';
     button.setAttribute('data-toggle', '');
-    button.textContent = 'Show intro';
+    button.textContent = 'Bemutatkozás';
     card.appendChild(button);
 
     var intro = document.createElement('p');
@@ -41,7 +41,7 @@
     button.addEventListener('click', function () {
       var opening = intro.hidden;
       intro.hidden = !opening;
-      button.textContent = opening ? 'Hide intro' : 'Show intro';
+      button.textContent = opening ? 'Elrejtés' : 'Bemutatkozás';
     });
 
     return card;

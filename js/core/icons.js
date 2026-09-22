@@ -8,8 +8,7 @@
       if (!warned) {
         warned = true;
         console.warn(
-          '[icons] The Lucide library did not load. No internet connection? ' +
-          'See the "Offline icons" section of the README.'
+          '[icons] A Lucide könyvtár nem töltődött be. Nincs internetkapcsolat?'
         );
       }
       return;
