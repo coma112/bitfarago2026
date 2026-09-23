@@ -32,7 +32,7 @@ function renderEfficiencyRanking(container, refuels) {
   const segments = getRefuelSegments(refuels);
 
   if (!segments.length) {
-    container.innerHTML = '<p class="table-empty">A rangsorhoz legalább két tankolás szükséges.</p>';
+    container.innerHTML = '<p class="table-empty">Legalább két tankolás kell hozzá.</p>';
     return;
   }
 

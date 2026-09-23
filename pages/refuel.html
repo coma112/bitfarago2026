@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 2 — Tankolási napló | BitFaragó 2026</title>
+    <title>Tankolási napló | BitFaragó 2026</title>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body data-page="refuel" data-base="../">
@@ -11,10 +11,7 @@
 
     <main class="main container main--wide">
       <div class="section__header">
-        <div>
-          <h1>Tankolások áttekintése</h1>
-          <p>Kövesd nyomon a tankolásaidat, a költségeket és a fogyasztást</p>
-        </div>
+        <h1>Tankolási napló</h1>
       </div>
       <div id="statCards" class="stat-cards"></div>
 
@@ -24,7 +21,7 @@
             <span class="card__icon card__icon--primary">
               <i data-lucide="plus-circle"></i>
             </span>
-            <h2>Új tankolás rögzítése</h2>
+            <h2>Új tankolás</h2>
           </div>
           <form id="refuelForm" data-refuel-form class="refuel-form">
             <div class="form-field">
@@ -35,7 +32,7 @@
               </div>
             </div>
             <div class="form-field">
-              <label for="refuelAmount">Tankolt mennyiség (liter)</label>
+              <label for="refuelAmount">Mennyiség (L)</label>
               <div class="input-icon">
                 <i data-lucide="droplet"></i>
                 <input
@@ -50,7 +47,7 @@
               </div>
             </div>
             <div class="form-field">
-              <label for="refuelCost">Fizetett összeg (Ft)</label>
+              <label for="refuelCost">Összeg (Ft)</label>
               <div class="input-icon">
                 <i data-lucide="banknote"></i>
                 <input
@@ -65,7 +62,7 @@
               </div>
             </div>
             <div class="form-field">
-              <label for="refuelOdometer">Kilométer óra állás (km)</label>
+              <label for="refuelOdometer">Km-óra állás</label>
               <div class="input-icon">
                 <i data-lucide="gauge"></i>
                 <input
@@ -94,8 +91,7 @@
             <div>
               <h2>Havi költségek</h2>
               <p class="card__subtitle">
-                Mennyit költöttél tankolásra hónaponként?
-                Éves összesen: <strong data-chart-total></strong>
+                Összesen: <strong data-chart-total></strong>
               </p>
             </div>
             <select class="select card__action" data-chart-year aria-label="Év"></select>
@@ -133,7 +129,7 @@
             </div>
             <button type="reset" class="btn btn--quiet">
               <i data-lucide="x"></i>
-              Szűrés törlése
+              Törlés
             </button>
           </form>
           <div id="refuelTable" class="table-wrap"></div>
@@ -146,7 +142,7 @@
             <div>
               <h2>Fogyasztási rangsor</h2>
               <p class="card__subtitle">
-                Egymás utáni tankolások között, a leghatékonyabbtól (teli tankkal számolva)
+                Tankolások között, a legjobbtól
               </p>
             </div>
           </div>
@@ -154,8 +150,6 @@
         </div>
       </div>
     </main>
-
-    <footer class="footer" id="footer"></footer>
 
     <script src="../vendor/lucide.min.js"></script>
     <script src="../js/core/app.js"></script>

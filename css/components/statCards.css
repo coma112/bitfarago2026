@@ -45,9 +45,3 @@
   font-size: 24px;
   color: var(--color-text);
 }
-
-.card-unit {
-  margin: 0;
-  font-size: 12px;
-  color: var(--color-text-muted);
-}

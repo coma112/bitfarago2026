@@ -9,30 +9,26 @@ function renderStatCards(container, refuels) {
   const cards = [
     {
       id: 0,
-      title: "Összes tankolás",
+      title: "Tankolások",
       value: totalCount,
-      unit: "alkalom",
       icon: '<i data-lucide="fuel" class="icon--lg"></i>'
     },
     {
       id: 1,
-      title: "Összes üzemanyag",
+      title: "Üzemanyag",
       value: totalLiters.toFixed(2).replace('.', ',') + " L",
-      unit: "liter",
       icon: '<i data-lucide="droplet" class="icon--lg"></i>'
     },
     {
       id: 2,
-      title: "Összes költség",
+      title: "Költség",
       value: totalCost.toLocaleString('hu-HU') + " Ft",
-      unit: "forint",
       icon: '<i data-lucide="banknote" class="icon--lg"></i>'
     },
     {
       id: 3,
       title: "Átlagfogyasztás",
       value: avgConsumption.toFixed(1).replace('.', ',') + " L/100km",
-      unit: "liter / 100 km",
       icon: '<i data-lucide="gauge" class="icon--lg"></i>'
     }
   ];
@@ -58,10 +54,6 @@ function renderStatCards(container, refuels) {
                 <h2 class="card-value">
                     ${card.value}
                 </h2>
-
-                <p class="card-unit">
-                    ${card.unit}
-                </p>
 
             </div>
 
