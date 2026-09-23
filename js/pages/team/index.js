@@ -64,17 +64,3 @@
     App.icons.refresh();
   });
 })(window.App);
-
-
-App.page('refuel', function () {
-  var refuels = getRefuels();
-
-  renderStatCards(document.querySelector('#statCards'), refuels);
-  renderMonthlyChart(document.querySelector('#monthlyChart'), refuels);
-
-
-  var form = document.querySelector('#refuelForm');
-  if (form) form.addEventListener('submit', handleRefuelSubmit);
-
-  App.icons.refresh();
-});

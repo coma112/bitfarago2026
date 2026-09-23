@@ -1,6 +1,6 @@
 .dashboard--row {
   display: grid;
-  grid-template-columns: 1fr 1.6fr 1.6fr;
+  grid-template-columns: 1fr 2fr;
   gap: var(--space-4, 16px);
   align-items: start;
   margin-block-end: var(--space-6, 24px);
