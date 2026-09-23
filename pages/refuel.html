@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 2 — Tankolási napló | BitFaragó 2026</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/pages/team.css" />
   </head>
   <body data-page="refuel" data-base="../">
     <header class="header" id="header"></header>
@@ -80,6 +79,7 @@
                 />
               </div>
             </div>
+            <p class="form-error" data-form-error hidden></p>
             <button type="submit" class="btn btn--primary">
               <i data-lucide="save"></i>
               Mentés
@@ -95,21 +95,68 @@
               <h2>Havi költségek</h2>
               <p class="card__subtitle">
                 Mennyit költöttél tankolásra hónaponként?
-                (<span data-chart-year></span>)
+                Éves összesen: <strong data-chart-total></strong>
               </p>
             </div>
+            <select class="select card__action" data-chart-year aria-label="Év"></select>
           </div>
 
           <div id="monthlyChart" class="bar-chart"></div>
+        </div>
+      </div>
+
+      <div class="refuel-grid">
+        <div class="card refuel-panel">
+          <div class="card__header">
+            <span class="card__icon card__icon--primary">
+              <i data-lucide="list"></i>
+            </span>
+            <div>
+              <h2>Tankolások</h2>
+              <p class="card__subtitle" data-filter-summary></p>
+            </div>
+          </div>
+          <form class="refuel-filter" data-refuel-filter>
+            <div class="form-field">
+              <label for="filterFrom">Kezdő dátum</label>
+              <div class="input-icon">
+                <i data-lucide="calendar"></i>
+                <input type="date" id="filterFrom" name="from" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="filterTo">Záró dátum</label>
+              <div class="input-icon">
+                <i data-lucide="calendar"></i>
+                <input type="date" id="filterTo" name="to" />
+              </div>
+            </div>
+            <button type="reset" class="btn btn--quiet">
+              <i data-lucide="x"></i>
+              Szűrés törlése
+            </button>
+          </form>
+          <div id="refuelTable" class="table-wrap"></div>
+        </div>
+        <div class="card refuel-panel">
+          <div class="card__header">
+            <span class="card__icon card__icon--primary">
+              <i data-lucide="trophy"></i>
+            </span>
+            <div>
+              <h2>Fogyasztási rangsor</h2>
+              <p class="card__subtitle">
+                Egymás utáni tankolások között, a leghatékonyabbtól (teli tankkal számolva)
+              </p>
+            </div>
+          </div>
+          <div id="efficiencyTable" class="table-wrap"></div>
         </div>
       </div>
     </main>
 
     <footer class="footer" id="footer"></footer>
 
-    <script src="../js/pages/refuel/monthlyStats.js"></script>
-    <script src="../js/pages/refuel/addRefuel.js"></script>
-    <script src="../js/pages/refuel/stats.js"></script>
     <script src="../vendor/lucide.min.js"></script>
     <script src="../js/core/app.js"></script>
     <script src="../js/core/dom.js"></script>
@@ -118,10 +165,12 @@
     <script src="../js/core/format.js"></script>
     <script src="../js/components/theme.js"></script>
     <script src="../js/components/layout.js"></script>
-    <script src="../js/pages/team/data.js"></script>
-    <script src="../js/pages/team/members.js"></script>
-    <script src="../js/pages/team/gallery.js"></script>
-    <script src="../js/pages/team/index.js"></script>
+    <script src="../js/pages/refuel/addRefuel.js"></script>
+    <script src="../js/pages/refuel/monthlyStats.js"></script>
+    <script src="../js/pages/refuel/stats.js"></script>
+    <script src="../js/pages/refuel/history.js"></script>
+    <script src="../js/pages/refuel/efficiency.js"></script>
+    <script src="../js/pages/refuel/index.js"></script>
     <script src="../js/boot.js"></script>
   </body>
 </html>

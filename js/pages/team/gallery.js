@@ -25,7 +25,7 @@
       img.src = App.asset(item.image);
       img.alt = item.caption || '';
       caption.textContent =
-        (index + 1) + ' / ' + images.length + ' — ' + (item.caption || '');
+        (index + 1) + ' / ' + images.length;
 
       if (!stage.contains(img)) {
         stage.innerHTML = '';

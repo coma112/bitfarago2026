@@ -15,19 +15,19 @@
         name: 'Pusztai Attila',
         role: 'Fullstack',
         photo: 'assets/img/team/Pusztai.png',
-        bio: 'TODO: rövid bemutatkozás (2-3 mondat).'
+        bio: 'Attila vagyok, matek órán sokszor eszem és szeretek programozni!'
       },
       {
         name: 'Kulás Dominik',
         role: 'Fullstack',
         photo: 'assets/img/team/domi.png',
-        bio: 'TODO: rövid bemutatkozás (2-3 mondat).'
+        bio: 'Dominik vagyok, sokat játszok és nem csípem a törit.'
       },
       {
         name: 'Sós Dávid',
         role: 'Fullstack',
         photo: 'assets/img/team/david.png',
-        bio: 'TODO: rövid bemutatkozás (2-3 mondat).'
+        bio: 'Dávid vagyok, szeretem a retró dolgokat és a rockot!'
       }
     ],
 
@@ -40,9 +40,11 @@
     ],
 
     gallery: [
-      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg', caption: 'TODO: képaláírás' },
-      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg', caption: 'TODO: képaláírás' },
-      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg', caption: 'TODO: képaláírás' }
+      { image: 'assets/img/gallery/0emeletsuliBejarat.jpg' },
+      { image: 'assets/img/gallery/tajkep1.jpg' },
+      { image: 'assets/img/gallery/tajkep2.jpg' },
+      { image: 'assets/img/gallery/tajkep3.jpg' },
+      { image: 'assets/img/gallery/tajkep4.jpg' }
     ]
   };
 
