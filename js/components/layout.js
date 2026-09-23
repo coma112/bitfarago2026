@@ -36,21 +36,11 @@
     ]);
   }
 
-  function footer() {
-    return el('div', { class: 'footer__inner container' }, [
-      el('p', { text: 'BitFaragó 2026 — csapatoldal' }),
-      el('p', { class: 'footer__muted', text: 'HTML · CSS · JavaScript' })
-    ]);
-  }
-
   function render() {
     var activeId = document.body.getAttribute('data-page');
 
     var headerRoot = document.getElementById('header');
     if (headerRoot) App.dom.fill(headerRoot, header(activeId));
-
-    var footerRoot = document.getElementById('footer');
-    if (footerRoot) App.dom.fill(footerRoot, footer());
 
     App.theme.init();
     App.icons.refresh();

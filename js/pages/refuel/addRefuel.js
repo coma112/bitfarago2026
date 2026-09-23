@@ -32,12 +32,12 @@ function validateRefuel(refuel, refuels) {
 
   const conflictEarlier = earlier.find(r => r.odometer >= refuel.odometer);
   if (conflictEarlier) {
-    return `A kilométeróra-állásnak nagyobbnak kell lennie, mint a(z) ${App.format.date(conflictEarlier.date)} dátumú tankolásnál (${formatKm(conflictEarlier.odometer)}).`;
+    return `Több kell legyen, mint ${formatKm(conflictEarlier.odometer)} (${App.format.date(conflictEarlier.date)}).`;
   }
 
   const conflictLater = later.find(r => r.odometer <= refuel.odometer);
   if (conflictLater) {
-    return `A kilométeróra-állásnak kisebbnek kell lennie, mint a(z) ${App.format.date(conflictLater.date)} dátumú tankolásnál (${formatKm(conflictLater.odometer)}).`;
+    return `Kevesebb kell legyen, mint ${formatKm(conflictLater.odometer)} (${App.format.date(conflictLater.date)}).`;
   }
 
   return '';

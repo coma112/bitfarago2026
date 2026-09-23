@@ -45,7 +45,7 @@ function renderRefuelTable(container, refuels) {
 
   if (from && to && from > to) {
     renderFilterSummary([]);
-    container.innerHTML = '<p class="table-empty">A kezdő dátum nem lehet későbbi a záró dátumnál.</p>';
+    container.innerHTML = '<p class="table-empty">A kezdő dátum a záró után van.</p>';
     return;
   }
 
@@ -54,8 +54,8 @@ function renderRefuelTable(container, refuels) {
 
   if (!filtered.length) {
     container.innerHTML = refuels.length
-      ? '<p class="table-empty">Nincs tankolás a megadott időszakban.</p>'
-      : '<p class="table-empty">Még nincs rögzített tankolás.</p>';
+      ? '<p class="table-empty">Ebben az időszakban nincs tankolás.</p>'
+      : '<p class="table-empty">Még nincs tankolás.</p>';
     return;
   }
 
