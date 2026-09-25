@@ -1,0 +1,227 @@
+.fruits-stats {
+  margin-bottom: var(--space-5);
+}
+
+.fruits-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.fruits-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.fruits-panel {
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.fruits-panel h2 {
+  margin: 0;
+  font-size: var(--size-lg);
+}
+
+.fruits-panel .card__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+#game-message.is-error {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+.board-wrap {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 3px;
+  padding: 6px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background: var(--color-surface);
+  font-size: clamp(0.65rem, 2vw, 1rem);
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+}
+
+.cell--fruit {
+  cursor: pointer;
+}
+
+.cell--fruit:hover {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.fruit--a { color: #dc2626; background: color-mix(in srgb, #dc2626 12%, var(--color-surface)); }
+.fruit--k { color: #65a30d; background: color-mix(in srgb, #65a30d 14%, var(--color-surface)); }
+.fruit--s { color: #9333ea; background: color-mix(in srgb, #9333ea 12%, var(--color-surface)); }
+
+.cell--far {
+  opacity: 0.4;
+}
+
+.cell--player {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.game-over {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-5);
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-success);
+}
+
+.game-over__main {
+  min-width: 180px;
+}
+
+.game-over__label {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.game-over__score {
+  margin: 0;
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.game-over__reason {
+  margin: 0;
+  font-size: var(--size-xs);
+  color: var(--color-text-muted);
+}
+
+.game-over__reason:empty {
+  display: none;
+}
+
+.game-over__breakdown {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+}
+
+.game-over__breakdown strong {
+  margin-left: var(--space-2);
+  color: var(--color-text);
+}
+
+.inventory {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.inventory__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.inventory__letter {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.inventory__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.inventory__info small {
+  font-size: var(--size-xs);
+  color: var(--color-text-muted);
+}
+
+.inventory__count {
+  min-width: 2ch;
+  font-size: var(--size-lg);
+  font-weight: 700;
+  text-align: right;
+}
+
+.rules {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+}
+
+.rules li {
+  padding: var(--space-1) 0;
+}
+
+.rules strong {
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .fruits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .board {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .inventory__item {
+    flex-wrap: wrap;
+  }
+}
