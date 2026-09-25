@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyümölcsszedő | BitFaragó 2026</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/fruits.css" />
+  </head>
+  <body data-page="fruits" data-base="../">
+    <header class="header" id="header"></header>
+
+    <main class="main container main--wide">
+      <div class="section__header">
+        <h1>Gyümölcsszedő</h1>
+      </div>
+
+      <div id="game-over-screen" class="card game-over" hidden>
+        <div class="game-over__main">
+          <p class="game-over__label">Játék vége, végleges pontszám</p>
+          <p class="game-over__score" id="final-score">0</p>
+          <p class="game-over__reason" id="game-over-reason"></p>
+        </div>
+        <ul class="game-over__breakdown" id="final-breakdown"></ul>
+        <button type="button" class="btn btn--primary" data-new-game>
+          <i data-lucide="rotate-ccw"></i>
+          Új játék
+        </button>
+      </div>
+
+      <div class="stat-cards fruits-stats">
+        <div class="stat-card">
+          <div class="card-icon"><i data-lucide="zap" class="icon--lg"></i></div>
+          <div class="card-content">
+            <p class="card-title">Energia</p>
+            <h2 class="card-value" id="energy-val">40</h2>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="card-icon"><i data-lucide="trophy" class="icon--lg"></i></div>
+          <div class="card-content">
+            <p class="card-title">Pontszám</p>
+            <h2 class="card-value" id="score-val">0</h2>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="card-icon"><i data-lucide="grid-3x3" class="icon--lg"></i></div>
+          <div class="card-content">
+            <p class="card-title">Gyümölcsök</p>
+            <h2 class="card-value" id="fruits-left">0</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="fruits-grid">
+        <div class="card fruits-panel">
+          <div class="card__header">
+            <span class="card__icon card__icon--primary">
+              <i data-lucide="map"></i>
+            </span>
+            <div>
+              <h2>Pálya</h2>
+              <p class="card__subtitle" id="game-message"></p>
+            </div>
+          </div>
+
+          <div class="board-wrap">
+            <div id="board" class="board"></div>
+          </div>
+        </div>
+
+        <div class="fruits-side">
+          <div class="card fruits-panel">
+            <div class="card__header">
+              <span class="card__icon card__icon--primary">
+                <i data-lucide="shopping-basket"></i>
+              </span>
+              <div>
+                <h2>Kosár</h2>
+              </div>
+            </div>
+
+            <ul class="inventory">
+              <li class="inventory__item">
+                <span class="inventory__letter fruit--a">A</span>
+                <span class="inventory__info">
+                  <strong>Alma</strong>
+                  <small>+4 energia és -2 pont</small>
+                </span>
+                <span class="inventory__count" id="inv-a">0</span>
+                <button type="button" class="btn" data-eat="a">
+                  <i data-lucide="utensils"></i> Megeszem
+                </button>
+              </li>
+              <li class="inventory__item">
+                <span class="inventory__letter fruit--k">K</span>
+                <span class="inventory__info">
+                  <strong>Körte</strong>
+                  <small>+6 energia és -1, -2, -3... pont</small>
+                </span>
+                <span class="inventory__count" id="inv-k">0</span>
+                <button type="button" class="btn" data-eat="k">
+                  <i data-lucide="utensils"></i> Megeszem
+                </button>
+              </li>
+              <li class="inventory__item">
+                <span class="inventory__letter fruit--s">S</span>
+                <span class="inventory__info">
+                  <strong>Szőlő</strong>
+                  <small>+5 energia és -3 pont</small>
+                </span>
+                <span class="inventory__count" id="inv-s">0</span>
+                <button type="button" class="btn" data-eat="s">
+                  <i data-lucide="utensils"></i> Megeszem
+                </button>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn--danger btn--full" data-end-game>
+              <i data-lucide="flag"></i>
+              Játék befejezése
+            </button>
+          </div>
+
+          <div class="card fruits-panel">
+            <div class="card__header">
+              <span class="card__icon card__icon--primary">
+                <i data-lucide="info"></i>
+              </span>
+              <h2>Pontozás</h2>
+            </div>
+            <ul class="rules">
+              <li>Minden alma <strong>2 pont</strong></li>
+              <li>Minden szőlő <strong>3 pont</strong></li>
+              <li>Minden alma–szőlő pár további <strong>2 pont</strong></li>
+              <li>Az 1. körte 1, a 2. 2, a 3. 3 pont...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../vendor/lucide.min.js"></script>
+    <script src="../js/core/app.js"></script>
+    <script src="../js/core/dom.js"></script>
+    <script src="../js/core/icons.js"></script>
+    <script src="../js/core/storage.js"></script>
+    <script src="../js/components/theme.js"></script>
+    <script src="../js/components/layout.js"></script>
+    <script src="../js/pages/fruits/data.js"></script>
+    <script src="../js/pages/fruits/score.js"></script>
+    <script src="../js/pages/fruits/map.js"></script>
+    <script src="../js/pages/fruits/board.js"></script>
+    <script src="../js/pages/fruits/actions.js"></script>
+    <script src="../js/pages/fruits/index.js"></script>
+    <script src="../js/boot.js"></script>
+  </body>
+</html>

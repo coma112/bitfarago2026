@@ -6,7 +6,8 @@
   var PAGES = [
     { id: 'home',   title: 'Kezdőlap',  path: 'index.html',        icon: 'house' },
     { id: 'team',   title: '1. feladat', path: 'pages/team.html',   icon: 'users' },
-    { id: 'refuel', title: '2. feladat', path: 'pages/refuel.html', icon: 'fuel' }
+    { id: 'refuel', title: '2. feladat', path: 'pages/refuel.html', icon: 'fuel' },
+    { id: 'fruits', title: '3. feladat', path: 'pages/fruits.html', icon: 'route' }
   ];
 
   function nav(activeId) {
