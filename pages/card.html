@@ -4,21 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../css/pages/card.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
-  <body>
-    <main>
-      <header>
-        <h1>Magyar Kártya</h1>
-        <button>Uj Játék</button>
-      </header>
-      <main>
-        <div>
-          <span id="point">0</span>
-          <span id="robotPoint">0</span>
-        </div>
-      </main>
-    </main>
+  <body data-page="card" data-base="../">
+    <header class="header" id="header"></header>
 
+    <div class="app">
+      <main>
+        <section class="topClass">
+          <div>
+            <h1>Magyar Kártya / Francia Kártya</h1>
+            <p>Két játékos · 32 lap · Aki több pontot gyűjt, az nyer!</p>
+          </div>
+          <button id="newGameBtn">Új játék</button>
+        </section>
+
+        <section class="table">
+          <div class="topRow">
+            <div class="playerBox">
+              Gép<br />Pontok: <span id="robotPoint">0</span>
+            </div>
+            <div id="robotCards"></div>
+            <div class="playerBox">
+              Te<br />Pontok: <span id="playerPoint">0</span>
+            </div>
+          </div>
+
+          <div id="playCards">
+            <span class="callerCard"></span>
+            <span class="responseCard"></span>
+          </div>
+
+          <p id="status">A gép hívott</p>
+
+          <div id="playerCards"></div>
+
+          <div class="buttons">
+            <button id="playBtn">Lap kijátszása</button>
+            <button id="autoBtn">Automatikus</button>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="../js/pages/cards/game.js"></script>
+    <script src="../js/pages/cards/card.js"></script>
     <script src="../vendor/lucide.min.js"></script>
     <script src="../js/core/app.js"></script>
     <script src="../js/core/dom.js"></script>
@@ -26,12 +58,6 @@
     <script src="../js/core/storage.js"></script>
     <script src="../js/components/theme.js"></script>
     <script src="../js/components/layout.js"></script>
-    <script src="../js/pages/fruits/data.js"></script>
-    <script src="../js/pages/fruits/score.js"></script>
-    <script src="../js/pages/fruits/map.js"></script>
-    <script src="../js/pages/fruits/board.js"></script>
-    <script src="../js/pages/fruits/actions.js"></script>
-    <script src="../js/pages/fruits/index.js"></script>
     <script src="../js/boot.js"></script>
   </body>
 </html>

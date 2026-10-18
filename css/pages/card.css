@@ -1,0 +1,122 @@
+.app {
+  --table-green: #0b4a33;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-5);
+}
+
+.app main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ===== Fejléc ===== */
+.topClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+.topClass h1 {
+  font-size: var(--size-xl);
+}
+.topClass p {
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+/* ===== Asztal ===== */
+.table {
+  background: var(--table-green);
+  color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.topRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playerBox {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  line-height: 1.6;
+  min-width: 140px;
+}
+.playerBox span {
+  font-weight: bold;
+  font-size: var(--size-lg);
+}
+
+#robotCards,
+#playerCards {
+  display: flex;
+  gap: var(--space-3);
+  min-height: 110px;
+}
+
+/* ===== Kijátszott lapok helye ===== */
+#playCards {
+  display: flex;
+  gap: var(--space-7);
+}
+
+.callerCard,
+.responseCard {
+  display: inline-block;
+  width: 90px;
+  height: 130px;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-md);
+}
+
+#status {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--size-sm);
+}
+
+/* ===== Gombok ===== */
+.buttons {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.app button {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--size-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.app button:hover {
+  filter: brightness(1.1);
+}
+
+#playBtn {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+#info {
+  color: var(--color-text-muted);
+}
