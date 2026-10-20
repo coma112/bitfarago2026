@@ -7,7 +7,6 @@
   let allapot = null;
   let idozito = null;
 
-  // ===== Pakli =====
   function ujPakli() {
     const pakli = [];
     for (const szin of SZINEK) {
