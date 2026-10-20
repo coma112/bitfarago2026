@@ -8,7 +8,7 @@
     { id: 'team',   title: '1. feladat', path: 'pages/team.html',   icon: 'users' },
     { id: 'refuel', title: '2. feladat', path: 'pages/refuel.html', icon: 'fuel' },
     { id: 'fruits', title: '3. feladat', path: 'pages/fruits.html', icon: 'route' },
-    { id: 'fruits', title: '4. feladat', path: 'pages/card.html', icon: 'route' }
+    { id: 'card',   title: '4. feladat', path: 'pages/card.html',   icon: 'route' }
   ];
 
   function nav(activeId) {
